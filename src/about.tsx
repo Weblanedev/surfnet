@@ -18,21 +18,21 @@ const About = () => {
         </Link>
 
         <div className="md:flex items-center justify-center gap-14 hidden">
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          <Link to="/" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
             Home
-          </p>
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          </Link>
+          <Link to="/about-us" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
             About
-          </p>
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          </Link>
+          <Link to="/blog" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
             Blog
-          </p>
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          </Link>
+          <Link to="/billing" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
             Billing
-          </p>
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
-            Blog
-          </p>
+          </Link>
+          <Link to="/contact-us" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+            Contact
+          </Link>
         </div>
 
         {navbarVisible ? (
@@ -93,25 +93,25 @@ const About = () => {
             Billing
           </Link>
           <Link
-            to="/blog"
+            to="/contact-us"
             className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full py-3 hover:text-green-500 transition-colors"
           >
-            Blog
+            Contact
           </Link>
         </div>
       </nav>
 
       <section className="relative border h-[300px] md:h-[400px]">
-        <div className="absolute z-10 opacity-50 w-full h-full  bg-black"></div>
+        <div className="absolute z-10 opacity-20 w-full h-full  bg-black"></div>
 
         <img
-          src="https://www.surfnet.site/wp-content/uploads/2024/03/microsoft-edge-DNADGmifFsc-unsplash-2048x1366.jpg"
+          src="https://seolounge.radiantthemes.com/wp-content/uploads/2018/07/About-Best-Background-Image.jpg?id=836"
           alt=""
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-start justify-center h-full ml-10 md:ml-[130px]">
-          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[550px] md:w-[560px] leading-snug md:leading-[72px]">
+        <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-center justify-center h-full w-full">
+          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[550px] md:w-[560px] text-center leading-snug md:leading-[72px]">
             About Us
           </h1>
         </div>

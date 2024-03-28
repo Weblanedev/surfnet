@@ -50,21 +50,21 @@ function App() {
         </Link>
 
         <div className="md:flex items-center justify-center gap-14 hidden">
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          <Link to="/" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
             Home
-          </p>
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          </Link>
+          <Link to="/about-us" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
             About
-          </p>
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          </Link>
+          <Link to="/blog" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
             Blog
-          </p>
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          </Link>
+          <Link to="/billing" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
             Billing
-          </p>
-          <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
-            Blog
-          </p>
+          </Link>
+          <Link to="/contact-us" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+            Contact
+          </Link>
         </div>
 
         {navbarVisible ? (
@@ -125,10 +125,10 @@ function App() {
             Billing
           </Link>
           <Link
-            to="/blog"
+            to="/contact-us"
             className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full py-3 hover:text-green-500 transition-colors"
           >
-            Blog
+            Contact
           </Link>
         </div>
       </nav>
