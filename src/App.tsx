@@ -1,6 +1,7 @@
 // import { useEffect, useState } from "react";
 import { useState } from "react";
 import "./App.css";
+import { Link } from "react-router-dom";
 
 function App() {
   const [navbarVisible, setNavbarVisible] = useState<boolean>(false);
@@ -41,9 +42,12 @@ function App() {
         id="navbar"
         className={`px-[40px] md:px-[130px] z-40 py-[18px] shadow-2xl shadow-blue-900/20 flex items-center justify-between w-full top-[0px] left-0 fixed bg-white`}
       >
-        <h1 className="text-[20px] md:text-[30px] md:font-bold font-medium text-[#333333]">
+        <Link
+          to="/"
+          className="text-[20px] md:text-[30px] md:font-bold font-medium text-[#333333]"
+        >
           Surfnet
-        </h1>
+        </Link>
 
         <div className="md:flex items-center justify-center gap-14 hidden">
           <p className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
@@ -96,21 +100,36 @@ function App() {
             navbarVisible ? "top-[66px]" : "-top-[300px]"
           } shadow-2xl shadow-blue-900/20 flex flex-col items-center justify-between w-full left-0 absolute bg-white px-10 md:hidden`}
         >
-          <p className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors">
+          <Link
+            to="/"
+            className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors"
+          >
             Home
-          </p>
-          <p className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors">
+          </Link>
+          <Link
+            to="/about-us"
+            className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors"
+          >
             About
-          </p>
-          <p className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors">
+          </Link>
+          <Link
+            to="/blog"
+            className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors"
+          >
             Blog
-          </p>
-          <p className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors">
+          </Link>
+          <Link
+            to="/billing"
+            className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors"
+          >
             Billing
-          </p>
-          <p className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full py-3 hover:text-green-500 transition-colors">
+          </Link>
+          <Link
+            to="/blog"
+            className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full py-3 hover:text-green-500 transition-colors"
+          >
             Blog
-          </p>
+          </Link>
         </div>
       </nav>
 
