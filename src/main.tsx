@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./about.tsx";
 import Blog from "./blog.tsx";
 import BlogOne from "./blog-one.tsx";
+import Contact from "./contact.tsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/blog/three",
     element: <BlogOne />,
+  },
+  {
+    path: "/contact-us",
+    element: <Contact />,
   },
 ]);
 
