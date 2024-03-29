@@ -7,6 +7,8 @@ import About from "./about.tsx";
 import Blog from "./blog.tsx";
 import BlogOne from "./blog-one.tsx";
 import Contact from "./contact.tsx";
+import BlogTwo from "./blog-two.tsx";
+import BlogThree from "./blog-three.tsx";
 
 const router = createBrowserRouter([
   {
@@ -27,11 +29,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/blog/two",
-    element: <BlogOne />,
+    element: <BlogTwo />,
   },
   {
     path: "/blog/three",
-    element: <BlogOne />,
+    element: <BlogThree />,
   },
   {
     path: "/contact-us",
