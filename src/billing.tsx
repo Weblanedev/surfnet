@@ -1,8 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { COUNTRIES_AND_STATES } from "./country-states";
 
-const Contact = () => {
+const Billing = () => {
   const [navbarVisible, setNavbarVisible] = useState<boolean>(false);
+
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [selectedState, setSelectedState] = useState<string>("");
+
+  const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCountry(event.target.value);
+    setSelectedState("");
+  };
+
+  const handleStateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedState(event.target.value);
+  };
 
   return (
     <div className="w-full h-full flex flex-col pt-[66px] md:pt-[80px]">
@@ -127,66 +140,200 @@ const Contact = () => {
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-center justify-center h-full w-full">
           <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[550px] md:w-[560px] text-center leading-snug md:leading-[72px]">
-            Contact Us
+            Checkout
           </h1>
         </div>
       </section>
 
-      <section className="relative p-10 md:px-[130px] md:py-[130px] flex flex-col gap-8 items-center w-full justify-center">
-        <div className="flex flex-col gap-2.5 text-[#181616] items-center justify-center md:w-[720px]">
-          <h4 className="text-base font-medium">GET IN TOUCH</h4>
-          <h2 className="text-[35px] font-bold">Schedule Meeting</h2>
-          <p className="text-[16px] text-black leading-[28.8px] font-normal w-full text-center">
-            So kind brought can’t wherein i man fly fruit it beginning meat one
-            a gathered our day moving have beginning him.
-          </p>
-        </div>
+      <section className="relative p-10 md:px-[130px] md:py-[130px] flex flex-col md:flex-row gap-8 items-center md:items-start w-full justify-center">
+        <div className="flex flex-col gap-8 items-center w-full justify-center md:pr-8 md:border-r">
+          <div className="flex flex-col gap-2.5 text-[#181616] items-start justify-center md:w-[720px]">
+            <h2 className="text-[32px] font-bold">Billing details</h2>
+          </div>
 
-        <div className="w-full md:w-[720px]">
-          <form className="mx-auto w-full flex flex-col gap-5">
-            <div className="flex flex-col w-full gap-5 md:flex-row">
+          <div className="w-full md:w-[720px]">
+            <form className="mx-auto w-full flex flex-col gap-5">
+              <div className="flex flex-col w-full gap-5 md:flex-row">
+                <input
+                  type="text"
+                  className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
+                  placeholder="First Name"
+                  required
+                />
+                <input
+                  type="text"
+                  className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+
               <input
                 type="text"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
-                placeholder="Your Name"
+                placeholder="Company name (optional)"
                 required
               />
+
+              <select
+                id="country"
+                value={selectedCountry}
+                onChange={handleCountryChange}
+                className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px] pr-20"
+              >
+                <option className="text-[17px]" value="">
+                  Select a country / region
+                </option>
+                {Object.entries(COUNTRIES_AND_STATES.country)?.map(
+                  ([code, name]) => (
+                    <option key={code} value={code} className="text-[17px]">
+                      {name}
+                    </option>
+                  )
+                )}
+              </select>
+
+              <div className="flex flex-col w-full gap-5 md:flex-row">
+                <input
+                  type="text"
+                  className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
+                  placeholder="Street Address"
+                  required
+                />
+
+                <input
+                  type="text"
+                  className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
+                  placeholder="Apartment, suite, etc. (optional)"
+                  required
+                />
+              </div>
+
               <input
-                type="email"
+                type="text"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
-                placeholder="Your Email"
+                placeholder="Town / City"
                 required
               />
-            </div>
-            <div className="flex flex-col w-full gap-5 md:flex-row">
+
+              <select
+                id="state"
+                value={selectedState}
+                onChange={handleStateChange}
+                className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
+              >
+                <option value="" className="text-[17px]">
+                  Select a state
+                </option>
+                {COUNTRIES_AND_STATES.states[selectedCountry]?.map(
+                  ({ code, name }) => (
+                    <option key={code} value={code} className="text-[17px]">
+                      {name}
+                    </option>
+                  )
+                )}
+              </select>
+
+              <input
+                type="text"
+                className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
+                placeholder="ZIP / Postal Code"
+                required
+              />
+
               <input
                 type="text"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
                 placeholder="Phone"
                 required
               />
+
               <input
-                type="text"
+                type="email"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
-                placeholder="Subject"
+                placeholder="Email Address"
                 required
               />
+            </form>
+
+            <div className="flex flex-col gap-5 mt-10 text-[#181616] items-start justify-center md:w-[720px]">
+              <h2 className="text-[32px] font-bold">Additional Details</h2>
+
+              <textarea
+                id="message"
+                rows={7}
+                className="block p-[15px] w-full text-sm text-gray-900 border border-gray-300"
+                placeholder="Your Message"
+              ></textarea>
             </div>
+          </div>
+        </div>
 
-            <textarea
-              id="message"
-              rows={7}
-              className="block p-[15px] w-full text-sm text-gray-900 border border-gray-300"
-              placeholder="Your Message"
-            ></textarea>
+        <div className="flex flex-col gap-[15px] items-start w-full justify-center">
+          <h4 className="font-bold text-[#a20401] leading-[28px]">
+            YOUR ORDER
+          </h4>
 
-            <button
-              type="submit"
-              className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 flex items-center justify-center gap-3"
-            >
-              Submit
-            </button>
-          </form>
+          <div className="flex mt-[-5px] flex-col items-center justify-center w-full">
+            <div className="flex items-center justify-between py-[15px] w-full border-b">
+              <h4 className="text-[#707070] font-medium text-[13px]">
+                PRODUCT
+              </h4>
+              <h4 className="text-[#707070] font-medium text-[13px]">
+                SUBTOTAL
+              </h4>
+            </div>
+            <div className="flex items-center justify-between py-[15px] w-full border-b">
+              <h4 className="text-[#161616] font-medium text-[16px]">
+                Cabinet Wall Mounted × 1
+              </h4>
+              <h4 className="text-[#161616] font-medium text-[16px]">
+                $199.00
+              </h4>
+            </div>
+            <div className="flex items-center justify-between py-[15px] w-full border-b">
+              <h4 className="text-[#707070] font-medium text-[13px]">
+                SUBTOTAL
+              </h4>
+              <h4 className="text-[#161616] font-medium text-[16px]">
+                $199.00
+              </h4>
+            </div>
+            <div className="flex items-center justify-between py-[15px] w-full border-b">
+              <h4 className="text-[#707070] font-medium text-[13px]">TOTAL</h4>
+              <h4 className="text-[#a20401] font-medium text-[16px]">
+                $199.00
+              </h4>
+            </div>
+          </div>
+
+          <h4 className="font-bold text-[#a20401] leading-[28px]">
+            FLUTTERWAVE
+          </h4>
+
+          <div className="w-full flex flex-col gap-2 items-start">
+            <img
+              src="https://densefit.com/wp-content/plugins/woo-rave/assets/images/powered-by-rave.png"
+              alt=""
+              className="w-full"
+            />
+            <p className="text-[#707070] font-normal text-[13px]">
+              Make payment using your debit, credit card & bank account
+            </p>
+          </div>
+
+          <p className="text-[#161616] font-normal text-[16px] text-left">
+            Your personal data will be used to process your order, support your
+            experience throughout this website, and for other purposes described
+            in our privacy policy.
+          </p>
+
+          <button
+            type="submit"
+            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 w-full mt-[22px]"
+          >
+            Place Order
+          </button>
         </div>
       </section>
 
@@ -229,4 +376,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Billing;

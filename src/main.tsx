@@ -9,6 +9,7 @@ import BlogOne from "./blog-one.tsx";
 import Contact from "./contact.tsx";
 import BlogTwo from "./blog-two.tsx";
 import BlogThree from "./blog-three.tsx";
+import Billing from "./billing.tsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/contact-us",
     element: <Contact />,
+  },
+  {
+    path: "/billing",
+    element: <Billing />,
   },
 ]);
 
