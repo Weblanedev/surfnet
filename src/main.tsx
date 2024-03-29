@@ -5,21 +5,12 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./about.tsx";
 import Blog from "./blog.tsx";
+import BlogOne from "./blog-one.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // children: [
-    //   {
-    //     path: "/about-us",
-    //     element: <About />,
-    //   },
-    //   {
-    //     path: "/home",
-    //     element: <About />,
-    //   },
-    // ],
   },
   {
     path: "/about-us",
@@ -30,8 +21,16 @@ const router = createBrowserRouter([
     element: <Blog />,
   },
   {
-    path: "/about-us",
-    element: <About />,
+    path: "/blog/one",
+    element: <BlogOne />,
+  },
+  {
+    path: "/blog/two",
+    element: <BlogOne />,
+  },
+  {
+    path: "/blog/three",
+    element: <BlogOne />,
   },
 ]);
 

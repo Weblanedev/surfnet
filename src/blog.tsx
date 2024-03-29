@@ -118,7 +118,10 @@ const Blog = () => {
 
       <section className="relative p-10 md:px-[130px] md:py-[100px] flex flex-col md:flex-col gap-8 items-center w-full justify-center">
         <div className="flex flex-col md:flex-row gap-7">
-          <div className="w-[660px] h-[334px] md:w-[607px] md:h-[396px] relative rounded-2xl cursor-pointer group">
+          <Link
+            to="/blog/one"
+            className="w-[660px] h-[334px] md:w-[607px] md:h-[396px] relative rounded-2xl cursor-pointer group"
+          >
             <div className="absolute z-10 opacity-50 w-full h-full  bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
 
             <img
@@ -137,10 +140,13 @@ const Blog = () => {
                 for Success
               </h1>
             </div>
-          </div>
+          </Link>
 
           <div className="flex gap-7">
-            <div className="flex flex-col gap-[25px] group w-[316px] md:w-[288px] cursor-pointer">
+            <Link
+              to="/blog/two"
+              className="flex flex-col gap-[25px] group w-[316px] md:w-[288px] cursor-pointer"
+            >
               <div className="w-full h-[236px] md:h-[216px] relative">
                 <div className="absolute z-10 opacity-50 w-full h-[236px] md:h-[216px] bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
                 <img
@@ -156,13 +162,15 @@ const Blog = () => {
                 </h4>
 
                 <h1 className="font-medium md:font-semibold text-[23px] w-full md:w-full leading-snug">
-                  Navigating the World of eSports Betting: A
-                  Beginner’s Guide
+                  Navigating the World of eSports Betting: A Beginner’s Guide
                 </h1>
               </div>
-            </div>
+            </Link>
 
-            <div className="flex flex-col gap-[25px] group w-[316px] md:w-[288px] cursor-pointer">
+            <Link
+              to="/blog/three"
+              className="flex flex-col gap-[25px] group w-[316px] md:w-[288px] cursor-pointer"
+            >
               <div className="w-full h-[236px] md:h-[216px] relative">
                 <div className="absolute z-10 opacity-50 w-full h-[236px] md:h-[216px] bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
                 <img
@@ -178,10 +186,10 @@ const Blog = () => {
                 </h4>
 
                 <h1 className="font-medium md:font-semibold text-[23px] w-full md:w-full leading-snug">
-                Maximizing Profit with Live Betting: Tips and Strategies
+                  Maximizing Profit with Live Betting: Tips and Strategies
                 </h1>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
