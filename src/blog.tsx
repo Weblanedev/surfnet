@@ -120,7 +120,7 @@ const Blog = () => {
         <div className="flex flex-col md:flex-row gap-7">
           <Link
             to="/blog/one"
-            className="w-[660px] h-[334px] md:w-[607px] md:h-[396px] relative rounded-2xl cursor-pointer group"
+            className="w-full sm:w-[660px] h-[334px] md:w-[607px] md:h-[396px] relative rounded-2xl cursor-pointer group"
           >
             <div className="absolute z-10 opacity-50 w-full h-full  bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
 
@@ -135,17 +135,17 @@ const Blog = () => {
                 News
               </h4>
 
-              <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-[550px] md:w-[400px] leading-snug md:leading-snug">
+              <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-full sm:w-[550px] md:w-[400px] leading-snug md:leading-snug">
                 Advanced Statistical Analysis in Sports Betting: Leveraging Data
                 for Success
               </h1>
             </div>
           </Link>
 
-          <div className="flex gap-7">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-7">
             <Link
               to="/blog/two"
-              className="flex flex-col gap-[25px] group w-[316px] md:w-[288px] cursor-pointer"
+              className="flex flex-col gap-[25px] group w-full sm:w-[316px] md:w-[288px] cursor-pointer"
             >
               <div className="w-full h-[236px] md:h-[216px] relative">
                 <div className="absolute z-10 opacity-50 w-full h-[236px] md:h-[216px] bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
@@ -169,7 +169,7 @@ const Blog = () => {
 
             <Link
               to="/blog/three"
-              className="flex flex-col gap-[25px] group w-[316px] md:w-[288px] cursor-pointer"
+              className="flex flex-col gap-[25px]  group w-full sm:w-[316px] md:w-[288px] cursor-pointer"
             >
               <div className="w-full h-[236px] md:h-[216px] relative">
                 <div className="absolute z-10 opacity-50 w-full h-[236px] md:h-[216px] bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
@@ -202,27 +202,42 @@ const Blog = () => {
             Aenean suscipit ege.
           </h3>
 
-          <button className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
             Get Started
-          </button>
+          </Link>
         </div>
 
         <div className="flex items-center justify-center gap-10">
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          <Link
+            to="/"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Home
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/about-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            About
+          </Link>
+          <Link
+            to="/blog"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Blog
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/contact-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Contact
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Terms
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Privacy
-          </p>
+          </Link>
+          <Link
+            to="/privacy-policy"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            Terms & Privacy
+          </Link>
         </div>
 
         <p className="text-[12px] leading-[24px] text-center text-gray-400">

@@ -129,7 +129,7 @@ const BlogTwo = () => {
           <h4 className="text-sm leading-[14px] font-medium text-white bg-green-500 hover:bg-green-600 cursor-pointer transition-colors rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
             Sports & Games
           </h4>
-          <h1 className="font-medium md:font-semibold text-[40px] md:text-[44px] w-[550px] md:w-[1000px] text-center leading-snug md:leading-[54px]">
+          <h1 className="font-medium md:font-semibold text-[40px] md:text-[44px] w-full sm:w-[550px] md:w-[1000px] text-center leading-snug md:leading-[54px]">
             Transforming you Online Business through SEO
           </h1>
         </div>
@@ -141,7 +141,7 @@ const BlogTwo = () => {
             <h3 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-white py-[9px] px-[17px] rounded-full font-semibold text-[14px] leading-[14px]">
               Betting Tips
             </h3>
-            <h2 className="font-mediium text-[30.68px] md:text-[40px] w-[530px] md:w-[382px] leading-[45px] text-[#010910]">
+            <h2 className="font-mediium text-[30.68px] md:text-[40px] w-full sm:w-[530px] md:w-[382px] leading-[45px] text-[#010910]">
               Statistical data in betting
             </h2>
             <p className="text-[16px] text-black leading-[28.8px] font-normal mt-[10px] w-full md:w-[382px]">
@@ -274,8 +274,8 @@ const BlogTwo = () => {
         </div>
 
         <Link
-          to="/blog/two"
-          className="w-[660px] h-[334px] md:w-full md:h-[396px] relative rounded-2xl cursor-pointer group mt-20"
+          to="/blog/three"
+          className="w-full sm:w-[660px] h-[334px] md:w-full md:h-[396px] relative rounded-2xl cursor-pointer group mt-20"
         >
           <div className="absolute z-10 opacity-50 w-full h-full  bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
 
@@ -285,12 +285,12 @@ const BlogTwo = () => {
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute top-0 bottom-0 left-0 right-0 max-w-max max-h-max mx-auto my-auto z-20 text-white flex flex-col gap-4 items-center justify-center ">
+          <div className="absolute top-0 bottom-0 left-0 right-0 max-w-max max-h-max mx-auto my-auto z-20 text-white flex flex-col gap-4 items-center justify-center px-5 sm:px-1">
             <h4 className="text-lg leading-[14px] font-medium text-white px-[14px] py-[7px] flex items-center justify-center gap-3">
               Next post
             </h4>
 
-            <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-[550px] md:w-[600px] leading-snug md:leading-snug text-center">
+            <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-full sm:w-[550px] md:w-[600px] leading-snug md:leading-snug text-center">
               Advanced Statistical Analysis in Sports Betting: Leveraging Data
               for Success
             </h1>
@@ -306,27 +306,42 @@ const BlogTwo = () => {
             Aenean suscipit ege.
           </h3>
 
-          <button className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
             Get Started
-          </button>
+          </Link>
         </div>
 
         <div className="flex items-center justify-center gap-10">
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          <Link
+            to="/"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Home
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/about-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            About
+          </Link>
+          <Link
+            to="/blog"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Blog
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/contact-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Contact
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Terms
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Privacy
-          </p>
+          </Link>
+          <Link
+            to="/privacy-policy"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            Terms & Privacy
+          </Link>
         </div>
 
         <p className="text-[12px] leading-[24px] text-center text-gray-400">

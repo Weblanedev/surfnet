@@ -15,7 +15,7 @@ export function Modal(props: {
       onClick={toggle}
     >
       <div
-        className="overflow-auto w-[500px] md:w-[600px] bg-white  border rounded-[14px] border-[#E1DFDF] flex items-center justify-center flex-col"
+        className="overflow-auto w-[400px] sm:w-[500px] md:w-[600px] bg-white  border rounded-[14px] border-[#E1DFDF] flex items-center justify-center flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {children}

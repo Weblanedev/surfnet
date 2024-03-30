@@ -126,7 +126,7 @@ const Contact = () => {
         />
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-center justify-center h-full w-full">
-          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[550px] md:w-[560px] text-center leading-snug md:leading-[72px]">
+          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-full sm:w-[550px] md:w-[560px] text-center leading-snug md:leading-[72px]">
             Contact Us
           </h1>
         </div>
@@ -198,27 +198,42 @@ const Contact = () => {
             Aenean suscipit ege.
           </h3>
 
-          <button className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
             Get Started
-          </button>
+          </Link>
         </div>
 
         <div className="flex items-center justify-center gap-10">
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          <Link
+            to="/"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Home
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/about-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            About
+          </Link>
+          <Link
+            to="/blog"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Blog
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/contact-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Contact
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Terms
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Privacy
-          </p>
+          </Link>
+          <Link
+            to="/privacy-policy"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            Terms & Privacy
+          </Link>
         </div>
 
         <p className="text-[12px] leading-[24px] text-center text-gray-400">

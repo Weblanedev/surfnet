@@ -111,7 +111,7 @@ const About = () => {
         />
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-center justify-center h-full w-full">
-          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[550px] md:w-[560px] text-center leading-snug md:leading-[72px]">
+          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-full sm:w-[550px] md:w-[560px] text-center leading-snug md:leading-[72px]">
             About Us
           </h1>
         </div>
@@ -123,10 +123,10 @@ const About = () => {
             <h3 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-semibold text-[20px] leading-[32px]">
               Bringing Action To Brands
             </h3>
-            <h2 className="font-bold text-[35px] w-[530px] md:w-[555px] leading-[45px] text-[#212d31]">
+            <h2 className="font-bold text-[35px] w-full sm:w-[530px] md:w-[555px] leading-[45px] text-[#212d31]">
               We Are a Dynamic Team of Professional People of Digital Marketing
             </h2>
-            <p className="text-[15px] text-[#212d31] leading[26px] font-medium mt-[5px] w-full md:w-[555px]">
+            <p className="text-[15px] text-[#212d31] leading-[26px] font-medium mt-[5px] w-full md:w-[555px]">
               We provide marketing services to startups and small businesses
               looking for a partner for their digital media. We work with you,
               not for you.We are lorem duoa headquartered in North-Eastern
@@ -144,7 +144,7 @@ const About = () => {
           <img
             src="https://seolounge.radiantthemes.com/wp-content/uploads/2018/07/About-Dynamic-Image.png"
             alt=""
-            className="w-full md:w-[585px] min-w-min"
+            className="w-full md:w-[585px] sm:min-w-min"
           />
         </div>
       </section>
@@ -157,9 +157,9 @@ const About = () => {
             Aenean suscipit ege.
           </h3>
 
-          <button className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
             Get Started
-          </button>
+          </Link>
         </div>
 
         <div className="flex items-center justify-center gap-10">

@@ -158,7 +158,7 @@ function App() {
         />
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-start justify-center h-full ml-10 md:ml-[130px]">
-          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[550px] md:w-[560px] leading-snug md:leading-[72px]">
+          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[400px] sm:w-[550px] md:w-[560px] leading-snug md:leading-[72px]">
             Bespoke Branding Solutions For Your Online Business
           </h1>
 
@@ -255,10 +255,10 @@ function App() {
             <h3 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-semibold text-[20px] leading-[32px]">
               Bringing Action To Brands
             </h3>
-            <h2 className="font-bold text-[35px] w-[630px] leading-[45px] text-[#212d31]">
+            <h2 className="font-bold text-[35px] w-[400px] sm:w-[630px] leading-[45px] text-[#212d31]">
               An Array Of Online Marketing Services
             </h2>
-            <p className="text-[15px] text-[#212d31] leading[26px] font-normal mt-[5px] w-[680px]">
+            <p className="text-[15px] text-[#212d31] leading-[26px] font-normal mt-[5px] w-[400px] sm:w-[680px]">
               Quis ipsum gravida. Accumsan lacus vel facilisis dolore magna
               aliqua lacus dolor sit amet, consectetur adipiscing elitd do. Quis
               ipsum gravida.
@@ -277,7 +277,7 @@ function App() {
                 <h4 className="font-bold text-[15px] leading-[26px] text-[#212d31]">
                   Scientific website optimization
                 </h4>
-                <p className="font-normal text-[15px] leading-[26px] text-[#212d31] w-[400px]">
+                <p className="font-normal text-[15px] leading-[26px] text-[#212d31] w-full sm:w-[400px]">
                   Quis ipsum gravida. Accumsan lacus facilisis dolor sit amet,
                   consectetur.
                 </p>
@@ -295,7 +295,7 @@ function App() {
                 <h4 className="font-bold text-[15px] leading-[26px] text-[#212d31]">
                   Generating increased revenue
                 </h4>
-                <p className="font-normal text-[15px] leading-[26px] text-[#212d31] w-[400px]">
+                <p className="font-normal text-[15px] leading-[26px] text-[#212d31] w-full sm:w-[400px]">
                   Quis ipsum gravida. Accumsan lacus facilisis dolor sit amet,
                   consectetur.
                 </p>
@@ -313,9 +313,9 @@ function App() {
             Aenean suscipit ege.
           </h3>
 
-          <button className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
             Get Started
-          </button>
+          </Link>
         </div>
 
         <div className="flex items-center justify-center gap-10">

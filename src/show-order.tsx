@@ -10,11 +10,9 @@ const ShowOrderModal = (props: { toggle: () => void; show: boolean }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      // Your function to be executed after 1 second
       playerRef?.current?.pause();
     }, 2000);
 
-    // Clean up the timer when the component unmounts or when the effect changes
     return () => clearTimeout(timer);
   }, [toggle]);
 
@@ -52,13 +50,13 @@ const ShowOrderModal = (props: { toggle: () => void; show: boolean }) => {
             Your order has been placed successfully!
           </h1>
           <p className="text-[15px] font-medium text-[#9CA3AF]">
-            Please{" "}
+            Please
             <Link
               to="/"
               className=" underline underline-offset-2 cursor-pointer"
             >
               click here
-            </Link>{" "}
+            </Link>
             to return to the Home page.
           </p>
         </div>
