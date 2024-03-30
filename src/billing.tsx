@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { COUNTRIES_AND_STATES } from "./country-states";
+import { useModals } from "./useModal";
+import ShowOrderModal from "./show-order";
 
 const Billing = () => {
   const [navbarVisible, setNavbarVisible] = useState<boolean>(false);
@@ -16,6 +18,13 @@ const Billing = () => {
   const handleStateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedState(event.target.value);
   };
+
+  const showInvoice = useModals(["showInvoice"]);
+
+  function toggleShowInvoiceModal() {
+    showInvoice.toggleModal("showInvoice");
+  }
+
 
   return (
     <div className="w-full h-full flex flex-col pt-[66px] md:pt-[80px]">
@@ -325,12 +334,13 @@ const Billing = () => {
           <p className="text-[#161616] font-normal text-[16px] text-left">
             Your personal data will be used to process your order, support your
             experience throughout this website, and for other purposes described
-            in our <span className="text-[#a20401]">privacy policy.</span>
+            in our <Link to="/privacy-policy" className="text-[#a20401] cursor-pointer">privacy policy.</Link>
           </p>
 
           <button
             type="submit"
-            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 w-full mt-[22px]"
+            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 w-full mt-[22px] transition-colors"
+            onClick={toggleShowInvoiceModal}
           >
             Place Order
           </button>
@@ -372,6 +382,11 @@ const Billing = () => {
           © 2024 Surfnet Limited. All Rights Reserved Apollo
         </p>
       </div>
+
+      <ShowOrderModal
+        show={showInvoice.modals.showInvoice.show}
+        toggle={toggleShowInvoiceModal}
+      />
     </div>
   );
 };

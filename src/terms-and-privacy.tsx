@@ -116,7 +116,7 @@ const PrivacyPolicy = () => {
         </div>
       </nav>
 
-      <section className="relative border h-[300px] md:h-[550px]">
+      <section className="relative border h-[300px] md:h-[400px]">
         <div className="absolute z-10 opacity-20 w-full h-full  bg-black"></div>
 
         <img
@@ -125,7 +125,7 @@ const PrivacyPolicy = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-9 items-center justify-center h-full w-full">
+        <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-center justify-center h-full w-full">
           <h1 className="font-medium md:font-semibold text-[40px] md:text-[44px] w-[550px] md:w-[1000px] text-center leading-snug md:leading-[54px]">
             Terms of Use & Privacy Policy
           </h1>
@@ -178,21 +178,30 @@ const PrivacyPolicy = () => {
 
           <ul className="text-[16px] text-black leading-[28.8px] font-normal w-full list-decimal pl-12 md:pl-20 mt-[-9px]">
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
-            
           </ul>
         </div>
 
@@ -221,7 +230,8 @@ const PrivacyPolicy = () => {
 
         <div className="relative flex flex-col gap-8 items-center w-full justify-center">
           <h3 className="font-mediium text-[30.68px] md:text-[40px] w-full leading-[45px] text-[#010910]">
-          Embedded content from other websites          </h3>
+            Embedded content from other websites{" "}
+          </h3>
           <p className="text-[16px] text-black leading-[28.8px] font-normal w-full">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             sagittis venenatis massa eu tempus. Integer eu enim diam. In vitae
@@ -231,25 +241,32 @@ const PrivacyPolicy = () => {
 
           <ul className="text-[16px] text-black leading-[28.8px] font-normal w-full list-decimal pl-12 md:pl-20 mt-[-9px]">
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
             <li>
-            If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us.
+              If you have an account on this site, or have left comments, you
+              can request to receive an exported file of the personal data we
+              hold about you, including any data you have provided to us.
             </li>
-            
           </ul>
         </div>
-
-       
       </section>
 
       <div className="w-full bg-blue-950 flex flex-col p-10 md:p-20 gap-10 md:px-[130px]">
