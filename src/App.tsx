@@ -50,19 +50,34 @@ function App() {
         </Link>
 
         <div className="md:flex items-center justify-center gap-14 hidden">
-          <Link to="/" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          <Link
+            to="/"
+            className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer"
+          >
             Home
           </Link>
-          <Link to="/about-us" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          <Link
+            to="/about-us"
+            className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer"
+          >
             About
           </Link>
-          <Link to="/blog" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          <Link
+            to="/blog"
+            className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer"
+          >
             Blog
           </Link>
-          <Link to="/billing" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          <Link
+            to="/billing"
+            className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer"
+          >
             Billing
           </Link>
-          <Link to="/contact-us" className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer">
+          <Link
+            to="/contact-us"
+            className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer"
+          >
             Contact
           </Link>
         </div>
@@ -304,21 +319,36 @@ function App() {
         </div>
 
         <div className="flex items-center justify-center gap-10">
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          <Link
+            to="/"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Home
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/about-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            About
+          </Link>
+          <Link
+            to="/blog"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Blog
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/contact-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Contact
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Terms
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Privacy
-          </p>
+          </Link>
+          <Link
+            to="/privacy-policy"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            Terms & Privacy
+          </Link>
         </div>
 
         <p className="text-[12px] leading-[24px] text-center text-gray-400">

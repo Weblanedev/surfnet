@@ -163,21 +163,36 @@ const About = () => {
         </div>
 
         <div className="flex items-center justify-center gap-10">
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          <Link
+            to="/"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Home
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/about-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            About
+          </Link>
+          <Link
+            to="/blog"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Blog
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
+          </Link>
+          <Link
+            to="/contact-us"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
             Contact
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Terms
-          </p>
-          <p className="text-[14px] leading-[24px] font-medium text-white cursor-pointer">
-            Privacy
-          </p>
+          </Link>
+          <Link
+            to="/privacy-policy"
+            className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
+          >
+            Terms & Privacy
+          </Link>
         </div>
 
         <p className="text-[12px] leading-[24px] text-center text-gray-400">

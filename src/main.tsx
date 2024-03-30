@@ -10,6 +10,7 @@ import Contact from "./contact.tsx";
 import BlogTwo from "./blog-two.tsx";
 import BlogThree from "./blog-three.tsx";
 import Billing from "./billing.tsx";
+import PrivacyPolicy from "./terms-and-privacy.tsx";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/billing",
     element: <Billing />,
+  },
+  {
+    path: "/privacy-policy",
+    element: <PrivacyPolicy />,
   },
 ]);
 

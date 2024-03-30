@@ -146,9 +146,9 @@ const Billing = () => {
       </section>
 
       <section className="relative p-10 md:px-[130px] md:py-[130px] flex flex-col md:flex-row gap-8 items-center md:items-start w-full justify-center">
-        <div className="flex flex-col gap-8 items-center w-full justify-center md:pr-8 md:border-r">
+        <div className="flex flex-col gap-8 items-start w-full justify-center md:pr-8 md:border-r">
           <div className="flex flex-col gap-2.5 text-[#181616] items-start justify-center md:w-[720px]">
-            <h2 className="text-[32px] font-bold">Billing details</h2>
+            <h2 className="text-[32px] font-medium">Billing details</h2>
           </div>
 
           <div className="w-full md:w-[720px]">
@@ -257,7 +257,7 @@ const Billing = () => {
             </form>
 
             <div className="flex flex-col gap-5 mt-10 text-[#181616] items-start justify-center md:w-[720px]">
-              <h2 className="text-[32px] font-bold">Additional Details</h2>
+              <h2 className="text-[32px] font-medium">Additional Details</h2>
 
               <textarea
                 id="message"
@@ -325,7 +325,7 @@ const Billing = () => {
           <p className="text-[#161616] font-normal text-[16px] text-left">
             Your personal data will be used to process your order, support your
             experience throughout this website, and for other purposes described
-            in our privacy policy.
+            in our <span className="text-[#a20401]">privacy policy.</span>
           </p>
 
           <button
