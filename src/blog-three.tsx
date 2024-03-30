@@ -127,10 +127,11 @@ const BlogThree = () => {
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-9 items-center justify-center h-full w-full">
           <h4 className="text-sm leading-[14px] font-medium text-white bg-green-500 hover:bg-green-600 cursor-pointer transition-colors rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
-            Sports & Games
+            News
           </h4>
           <h1 className="font-medium md:font-semibold text-[40px] md:text-[44px] w-full sm:w-[550px] md:w-[1000px] text-center leading-snug md:leading-[54px]">
-            Transforming you Online Business through SEO
+          Building a culture of effective decision-making
+
           </h1>
         </div>
       </section>
@@ -280,7 +281,7 @@ const BlogThree = () => {
           <div className="absolute z-10 opacity-50 w-full h-full  bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
 
           <img
-            src="https://www.surfnet.site/wp-content/uploads/2024/03/microsoft-edge-DNADGmifFsc-unsplash-2048x1366.jpg"
+            src="https://assets-global.website-files.com/646f9696be2579248b7e3010/65eaf7ffd9677a7c1a51a898_International%20Women%27s%20Day%20Portrait-p-500.jpg"
             alt=""
             className="w-full h-full object-cover rounded-2xl"
           />
@@ -291,8 +292,8 @@ const BlogThree = () => {
             </h4>
 
             <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-full sm:w-[550px] md:w-[600px] leading-snug md:leading-snug text-center">
-              Advanced Statistical Analysis in Sports Betting: Leveraging Data
-              for Success
+            How organisations can champion women every day of the year
+
             </h1>
           </div>
         </Link>

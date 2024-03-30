@@ -125,7 +125,7 @@ const Blog = () => {
             <div className="absolute z-10 opacity-50 w-full h-full  bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
 
             <img
-              src="https://www.surfnet.site/wp-content/uploads/2024/03/microsoft-edge-DNADGmifFsc-unsplash-2048x1366.jpg"
+              src="https://assets-global.website-files.com/646f9696be2579248b7e3010/65eaf7ffd9677a7c1a51a898_International%20Women%27s%20Day%20Portrait-p-500.jpg"
               alt=""
               className="w-full h-full object-cover rounded-2xl"
             />
@@ -136,8 +136,7 @@ const Blog = () => {
               </h4>
 
               <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-full sm:w-[550px] md:w-[400px] leading-snug md:leading-snug">
-                Advanced Statistical Analysis in Sports Betting: Leveraging Data
-                for Success
+                How organisations can champion women every day of the year
               </h1>
             </div>
           </Link>
@@ -150,7 +149,7 @@ const Blog = () => {
               <div className="w-full h-[236px] md:h-[216px] relative">
                 <div className="absolute z-10 opacity-50 w-full h-[236px] md:h-[216px] bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
                 <img
-                  src="https://www.surfnet.site/wp-content/uploads/2024/03/microsoft-edge-DNADGmifFsc-unsplash-2048x1366.jpg"
+                  src="https://assets-global.website-files.com/646f9696be2579248b7e3010/65cf9039d11098e171530daa_APV2-p-500.jpg"
                   alt=""
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -158,11 +157,11 @@ const Blog = () => {
 
               <div className="text-[#333333] flex flex-col gap-4 items-start justify-start">
                 <h4 className="text-sm leading-[14px] font-medium text-white bg-green-500 rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
-                  Sports & Games
+                  News
                 </h4>
 
                 <h1 className="font-medium md:font-semibold text-[23px] w-full md:w-full leading-snug">
-                  Navigating the World of eSports Betting: A Beginner’s Guide
+                  Apple Vision Pro and its future in the business world
                 </h1>
               </div>
             </Link>
@@ -174,7 +173,7 @@ const Blog = () => {
               <div className="w-full h-[236px] md:h-[216px] relative">
                 <div className="absolute z-10 opacity-50 w-full h-[236px] md:h-[216px] bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
                 <img
-                  src="https://www.surfnet.site/wp-content/uploads/2024/03/microsoft-edge-DNADGmifFsc-unsplash-2048x1366.jpg"
+                  src="https://assets-global.website-files.com/646f9696be2579248b7e3010/65ca1077dd9ec27336b4e220_Decision-Making-Header-001%20(1)-p-500.jpg"
                   alt=""
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -182,11 +181,11 @@ const Blog = () => {
 
               <div className="text-[#333333] flex flex-col gap-4 items-start justify-start">
                 <h4 className="text-sm leading-[14px] font-medium text-white bg-green-500 rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
-                  Sports & Games
+                  News
                 </h4>
 
                 <h1 className="font-medium md:font-semibold text-[23px] w-full md:w-full leading-snug">
-                  Maximizing Profit with Live Betting: Tips and Strategies
+                  Building a culture of effective decision-making
                 </h1>
               </div>
             </Link>
@@ -202,7 +201,10 @@ const Blog = () => {
             Aenean suscipit ege.
           </h3>
 
-          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link
+            to="/billing"
+            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max"
+          >
             Get Started
           </Link>
         </div>
