@@ -1,8 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useModals } from "./useModal";
+import ShowContactModal from "./show-contact";
 
 const Contact = () => {
   const [navbarVisible, setNavbarVisible] = useState<boolean>(false);
+
+  const showContact = useModals(["showContact"]);
+
+  function toggleShowContactModal() {
+    showContact.toggleModal("showContact");
+  }
 
   return (
     <div className="w-full h-full flex flex-col pt-[66px] md:pt-[80px]">
@@ -137,8 +145,8 @@ const Contact = () => {
           <h4 className="text-base font-medium">GET IN TOUCH</h4>
           <h2 className="text-[35px] font-bold">Schedule Meeting</h2>
           <p className="text-[16px] text-black leading-[28.8px] font-normal w-full text-center">
-            So kind brought can’t wherein i man fly fruit it beginning meat one
-            a gathered our day moving have beginning him.
+            We live to provide innovative solutions to problems like yours.
+            Let's talk.
           </p>
         </div>
 
@@ -183,6 +191,7 @@ const Contact = () => {
             <button
               type="submit"
               className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 flex items-center justify-center gap-3"
+              onClick={toggleShowContactModal}
             >
               Submit
             </button>
@@ -194,11 +203,13 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
           <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[800px]">
             We’re on a mission to build a better future where technology creates
-            good jobs for everyone. Fusce sed rutrum risus pulvinar tortor et.
-            Aenean suscipit ege.
+            good jobs for everyone.
           </h3>
 
-          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link
+            to="/billing"
+            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max"
+          >
             Get Started
           </Link>
         </div>
@@ -240,6 +251,11 @@ const Contact = () => {
           © 2024 Surfnet Limited. All Rights Reserved Apollo
         </p>
       </div>
+
+      <ShowContactModal
+        show={showContact.modals.showContact.show}
+        toggle={toggleShowContactModal}
+      />
     </div>
   );
 };
