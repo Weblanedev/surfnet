@@ -25,7 +25,6 @@ const Billing = () => {
     showInvoice.toggleModal("showInvoice");
   }
 
-
   return (
     <div className="w-full h-full flex flex-col pt-[66px] md:pt-[80px]">
       <nav
@@ -280,10 +279,10 @@ const Billing = () => {
 
         <div className="flex flex-col gap-[15px] items-start w-full justify-center">
           <h4 className="font-bold text-[#a20401] leading-[28px]">
-            YOUR ORDER
+            PAYMENT DETAILS
           </h4>
 
-          <div className="flex mt-[-5px] flex-col items-center justify-center w-full">
+          {/* <div className="flex mt-[-5px] flex-col items-center justify-center w-full">
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#707070] font-medium text-[13px]">
                 PRODUCT
@@ -314,6 +313,39 @@ const Billing = () => {
                 $199.00
               </h4>
             </div>
+          </div> */}
+
+          <div className="flex flex-col items-start justify-center w-full gap-5">
+            <p className="text-[#707070] font-normal text-[13px]">
+              You are about to make payment for Digital Marketing and Branding
+              Service.
+            </p>
+
+            <textarea
+              id="message"
+              rows={7}
+              className="block p-[15px] w-full text-sm text-gray-900 border border-gray-300 mt-[-10px]"
+              placeholder="Kindly type in this box the service description"
+            ></textarea>
+
+            <div className="relative w-full">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                <p className="text-gray-500 font-medium">₦</p>
+              </div>
+
+              <input
+                type="text"
+                defaultValue="25,000 - 37,000"
+                className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px] ps-10"
+                placeholder="Amount"
+                required
+              />
+            </div>
+
+            <p className="text-[#707070] mt-[-15px] font-normal text-[13px]">
+              Note: Fee charged is decided by the specific type service, and
+              based on service demand. It may be lesser or higher.
+            </p>
           </div>
 
           <h4 className="font-bold text-[#a20401] leading-[28px]">
@@ -334,7 +366,13 @@ const Billing = () => {
           <p className="text-[#161616] font-normal text-[16px] text-left">
             Your personal data will be used to process your order, support your
             experience throughout this website, and for other purposes described
-            in our <Link to="/privacy-policy" className="text-[#a20401] cursor-pointer">privacy policy.</Link>
+            in our{" "}
+            <Link
+              to="/privacy-policy"
+              className="text-[#a20401] cursor-pointer"
+            >
+              privacy policy.
+            </Link>
           </p>
 
           <button
@@ -351,11 +389,13 @@ const Billing = () => {
         <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
           <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[800px]">
             We’re on a mission to build a better future where technology creates
-            good jobs for everyone. Fusce sed rutrum risus pulvinar tortor et.
-            Aenean suscipit ege.
+            good jobs for everyone.
           </h3>
 
-          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link
+            to="/billing"
+            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max"
+          >
             Get Started
           </Link>
         </div>

@@ -47,7 +47,7 @@ const ShowOrderModal = (props: { toggle: () => void; show: boolean }) => {
         /> */}
         <div className=" flex flex-col text-center justify-center items-center gap-4">
           <h1 className="text-[32px] leading-10 text-black font-medium">
-            Your order has been placed successfully!
+            The details of your order has been successfully added to the waiting cart!
           </h1>
           <p className="text-[15px] font-medium text-[#9CA3AF]">
             Please
