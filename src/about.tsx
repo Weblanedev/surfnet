@@ -129,12 +129,10 @@ const About = () => {
             <p className="text-[15px] text-[#212d31] leading-[26px] font-medium mt-[5px] w-full md:w-[555px]">
               We provide marketing services to startups and small businesses
               looking for a partner for their digital media. We work with you,
-              not for you.We are lorem duoa headquartered in North-Eastern
+              not for you. We are headquartered in North-Eastern
               France, with our 19 associates located across nine countries in
               order to best serve a client base that stretches throughout North
-              America, Curabitur accumsan ultricies ultricies. Pellentesque
-              dapibus at nulla sed viverra. Fusce tempor orci non massa iaculis,
-              eu auctor.
+              America.
             </p>
             <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max mt-[25px]">
               Get Started
@@ -153,8 +151,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
           <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[800px]">
             We’re on a mission to build a better future where technology creates
-            good jobs for everyone. Fusce sed rutrum risus pulvinar tortor et.
-            Aenean suscipit ege.
+            good jobs for everyone.
           </h3>
 
           <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">

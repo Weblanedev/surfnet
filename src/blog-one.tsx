@@ -150,9 +150,7 @@ const BlogOne = () => {
               not for you.We are lorem duoa headquartered in North-Eastern
               France, with our 19 associates located across nine countries in
               order to best serve a client base that stretches throughout North
-              America, Curabitur accumsan ultricies ultricies. Pellentesque
-              dapibus at nulla sed viverra. Fusce tempor orci non massa iaculis,
-              eu auctor.
+              America.
             </p>
           </div>
 
@@ -168,13 +166,11 @@ const BlogOne = () => {
             Copywriting: What’s branding got to do with it?
           </h3>
           <p className="text-[16px] text-black leading-[28.8px] font-normal w-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            sagittis venenatis massa eu tempus. Integer eu enim diam. In vitae
-            vulputate metus, ac dapibus turpis. Vivamus consequat mauris aliquet
-            tellus feugiat accumsan. Nam tincidunt dolor vel auctor imperdiet.
-            Duis egestas ut ante eget ermentum. Donec eget elit eget urna mattis
-            sagittis eu eget dui. Phasellus quis tortor nec nisi rhoncus
-            condimentum tempor eu leo. Suspendisse at cursus risus.
+            Using customer insights to build customer-centric campaigns that
+            deliver high performance including messaging, propositions, campaign
+            flows and media strategy. Untapping revenue. Creating more value.
+            Unleashing the potential of your vision. Let us help you turn
+            insights into engagement and strategy into action.
           </p>
         </div>
 
@@ -183,37 +179,32 @@ const BlogOne = () => {
             Copywriting: What’s branding got to do with it?
           </h3>
           <p className="text-[16px] text-black leading-[28.8px] font-normal w-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            sagittis venenatis massa eu tempus. Integer eu enim diam. In vitae
-            vulputate metus, ac dapibus turpis. Vivamus consequat mauris aliquet
-            tellus feugiat accumsan. Nam tincidunt dolor vel auctor imperdiet.
+            Untapping revenue. Creating more value. Unleashing the potential of
+            your vision. Let us help you turn insights into engagement and
+            strategy into action. The right strategy will drive your business
+            forward.
           </p>
 
           <ul className="text-[16px] text-black leading-[28.8px] font-normal w-full list-decimal pl-12 md:pl-20 mt-[-9px]">
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
           </ul>
         </div>
@@ -223,13 +214,13 @@ const BlogOne = () => {
             How to find your brand message?
           </h3>
           <p className="text-[16px] text-black leading-[28.8px] font-normal w-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            sagittis venenatis massa eu tempus. Integer eu enim diam. In vitae
-            vulputate metus, ac dapibus turpis. Vivamus consequat mauris aliquet
-            tellus feugiat accumsan. Nam tincidunt dolor vel auctor imperdiet.
-            Duis egestas ut ante eget ermentum. Donec eget elit eget urna mattis
-            sagittis eu eget dui. Phasellus quis tortor nec nisi rhoncus
-            condimentum tempor eu leo. Suspendisse at cursus risus.
+            The right strategy will drive your business forward. Starting with
+            an immersive discovery process, we get to know your company and
+            understand your goals. Then, we map out a strategy that will achieve
+            those goals in the smartest way possible. Using customer insights to
+            build customer-centric campaigns that deliver high performance
+            including messaging, propositions, campaign flows and media
+            strategy.
           </p>
         </div>
 
@@ -238,37 +229,32 @@ const BlogOne = () => {
             Copywriting: What’s branding got to do with it?
           </h3>
           <p className="text-[16px] text-black leading-[28.8px] font-normal w-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            sagittis venenatis massa eu tempus. Integer eu enim diam. In vitae
-            vulputate metus, ac dapibus turpis. Vivamus consequat mauris aliquet
-            tellus feugiat accumsan. Nam tincidunt dolor vel auctor imperdiet.
+            Untapping revenue. Creating more value. Unleashing the potential of
+            your vision. Let us help you turn insights into engagement and
+            strategy into action. The right strategy will drive your business
+            forward.
           </p>
 
           <ul className="text-[16px] text-black leading-[28.8px] font-normal w-full list-decimal pl-12 md:pl-20 mt-[-9px]">
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
             <li>
-              Win Probability: The likelihood of a team or player winning a
-              game, calculated based on historical data and performance
-              indicators.
+              Your online platforms: need to work for your business, showing
+              your audience what you can do for them.
             </li>
           </ul>
         </div>
@@ -300,9 +286,7 @@ const BlogOne = () => {
       <div className="w-full bg-blue-950 flex flex-col p-10 md:p-20 gap-10 md:px-[130px]">
         <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
           <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[800px]">
-            We’re on a mission to build a better future where technology creates
-            good jobs for everyone. Fusce sed rutrum risus pulvinar tortor et.
-            Aenean suscipit ege.
+            We’re on a mission to build a better future where technology creates good jobs for everyone.
           </h3>
 
           <Link
