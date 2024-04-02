@@ -159,12 +159,15 @@ function App() {
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-start justify-center h-full ml-10 md:ml-[130px]">
           <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[400px] sm:w-[550px] md:w-[560px] leading-snug md:leading-[72px]">
-            Bespoke Branding Solutions For Your Online Business
+            Want to launch your brand into the future?
           </h1>
 
-          <button className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3">
+          <Link
+            to="/billing"
+            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3"
+          >
             Get Started
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -178,8 +181,7 @@ function App() {
               Learn How to Grow Your Business in Days
             </h2>
             <p className="text-[15px] text-[#212d31] leading[26px] font-medium mt-[5px] w-[340px]">
-              Quis ipsum gravida. Accumsan lacus vel facilisis dolore magna
-              aliqua lacus.
+            You need to be in the right place at the right time to reach your audience.
             </p>
           </div>
 
@@ -313,7 +315,10 @@ function App() {
             Aenean suscipit ege.
           </h3>
 
-          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link
+            to="/billing"
+            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max"
+          >
             Get Started
           </Link>
         </div>

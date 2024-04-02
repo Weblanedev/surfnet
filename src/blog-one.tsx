@@ -139,10 +139,10 @@ const BlogOne = () => {
         <div className="w-full flex flex-col md:flex-row gap-[66px] justify-between">
           <div className="flex flex-col items-start gap-[10px] md:pt-[78px]">
             <h3 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-white py-[9px] px-[17px] rounded-full font-semibold text-[14px] leading-[14px]">
-              Betting Tips
+              Marketing Tips
             </h3>
             <h2 className="font-mediium text-[30.68px] md:text-[40px] w-full sm:w-[530px] md:w-[382px] leading-[45px] text-[#010910]">
-              Statistical data in betting
+              Statistical data in Marketing
             </h2>
             <p className="text-[16px] text-black leading-[28.8px] font-normal mt-[10px] w-full md:w-[382px]">
               We provide marketing services to startups and small businesses

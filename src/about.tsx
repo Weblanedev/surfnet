@@ -136,9 +136,9 @@ const About = () => {
               dapibus at nulla sed viverra. Fusce tempor orci non massa iaculis,
               eu auctor.
             </p>
-            <button className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max mt-[25px]">
+            <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max mt-[25px]">
               Get Started
-            </button>
+            </Link>
           </div>
 
           <img

@@ -53,7 +53,7 @@ const ShowOrderModal = (props: { toggle: () => void; show: boolean }) => {
             Please
             <Link
               to="/"
-              className=" underline underline-offset-2 cursor-pointer"
+              className=" underline underline-offset-2 cursor-pointer px-1"
             >
               click here
             </Link>

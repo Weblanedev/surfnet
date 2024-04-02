@@ -130,7 +130,7 @@ const BlogTwo = () => {
             News
           </h4>
           <h1 className="font-medium md:font-semibold text-[40px] md:text-[44px] w-full sm:w-[550px] md:w-[1000px] text-center leading-snug md:leading-[54px]">
-          Apple Vision Pro and its future in the business world
+            Apple Vision Pro and its future in the business world
           </h1>
         </div>
       </section>
@@ -139,10 +139,10 @@ const BlogTwo = () => {
         <div className="w-full flex flex-col md:flex-row gap-[66px] justify-between">
           <div className="flex flex-col items-start gap-[10px] md:pt-[78px]">
             <h3 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-white py-[9px] px-[17px] rounded-full font-semibold text-[14px] leading-[14px]">
-              Betting Tips
+              Marketing Tips
             </h3>
             <h2 className="font-mediium text-[30.68px] md:text-[40px] w-full sm:w-[530px] md:w-[382px] leading-[45px] text-[#010910]">
-              Statistical data in betting
+              Statistical data in Marketing
             </h2>
             <p className="text-[16px] text-black leading-[28.8px] font-normal mt-[10px] w-full md:w-[382px]">
               We provide marketing services to startups and small businesses
@@ -291,8 +291,7 @@ const BlogTwo = () => {
             </h4>
 
             <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-full sm:w-[550px] md:w-[600px] leading-snug md:leading-snug text-center">
-            Building a culture of effective decision-making
-
+              Building a culture of effective decision-making
             </h1>
           </div>
         </Link>
@@ -306,7 +305,10 @@ const BlogTwo = () => {
             Aenean suscipit ege.
           </h3>
 
-          <Link to="/billing" className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max">
+          <Link
+            to="/billing"
+            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-green-600 flex items-center justify-center gap-3 max-w-max"
+          >
             Get Started
           </Link>
         </div>

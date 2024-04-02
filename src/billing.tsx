@@ -149,7 +149,7 @@ const Billing = () => {
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-center justify-center h-full w-full">
           <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-full sm:w-[550px] md:w-[560px] text-center leading-snug md:leading-[72px]">
-            Checkout
+            Order Details
           </h1>
         </div>
       </section>
@@ -317,12 +317,12 @@ const Billing = () => {
           </div>
 
           <h4 className="font-bold text-[#a20401] leading-[28px]">
-            FLUTTERWAVE
+            PAYMENT METHODS
           </h4>
 
           <div className="w-full flex flex-col gap-2 items-start">
             <img
-              src="https://densefit.com/wp-content/plugins/woo-rave/assets/images/powered-by-rave.png"
+              src="https://help.zazzle.com/hc/article_attachments/360010513393"
               alt=""
               className="w-full"
             />
