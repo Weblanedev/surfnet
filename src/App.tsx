@@ -181,7 +181,8 @@ function App() {
               Learn How to Grow Your Business in Days
             </h2>
             <p className="text-[15px] text-[#212d31] leading[26px] font-medium mt-[5px] w-[340px]">
-            You need to be in the right place at the right time to reach your audience.
+              You need to be in the right place at the right time to reach your
+              audience.
             </p>
           </div>
 
@@ -195,7 +196,7 @@ function App() {
               Creative Content
             </h3>
             <p className="text-[15px] text-[#212d31] leading[26px] font-medium w-[280px] text-center">
-              Quis ipsum gravida. Accumsan lacus consectetur.
+              Think of us as your gateway to a new, united frontier.{" "}
             </p>
           </div>
 
@@ -209,7 +210,7 @@ function App() {
               Competitor Analysis
             </h3>
             <p className="text-[15px] text-[#212d31] leading[26px] font-medium w-[280px] text-center">
-              Quis ipsum gravida. Accumsan lacus consectetur.
+              Think of us as your gateway to a new, united frontier.{" "}
             </p>
           </div>
         </div>
@@ -225,7 +226,7 @@ function App() {
               Business Life Cycle
             </h3>
             <p className="text-[15px] text-[#212d31] leading[26px] font-medium w-[280px] text-center">
-              Quis ipsum gravida. Accumsan lacus consectetur.
+              Think of us as your gateway to a new, united frontier.{" "}
             </p>
           </div>
 
@@ -239,7 +240,7 @@ function App() {
               Implementation
             </h3>
             <p className="text-[15px] text-[#212d31] leading[26px] font-medium w-[280px] text-center">
-              Quis ipsum gravida. Accumsan lacus consectetur.
+              Think of us as your gateway to a new, united frontier.{" "}
             </p>
           </div>
         </div>
@@ -261,9 +262,9 @@ function App() {
               An Array Of Online Marketing Services
             </h2>
             <p className="text-[15px] text-[#212d31] leading-[26px] font-normal mt-[5px] w-[400px] sm:w-[680px]">
-              Quis ipsum gravida. Accumsan lacus vel facilisis dolore magna
-              aliqua lacus dolor sit amet, consectetur adipiscing elitd do. Quis
-              ipsum gravida.
+              We’re a marketing agency that combines channel development,
+              creative tactics, and futuristic technologies to help
+              organizations blast-off to infinite success.
             </p>
           </div>
 
@@ -277,11 +278,11 @@ function App() {
 
               <div className="flex flex-col items-start gap-[4px]">
                 <h4 className="font-bold text-[15px] leading-[26px] text-[#212d31]">
-                  Scientific website optimization
+                  Marketing{" "}
                 </h4>
                 <p className="font-normal text-[15px] leading-[26px] text-[#212d31] w-full sm:w-[400px]">
-                  Quis ipsum gravida. Accumsan lacus facilisis dolor sit amet,
-                  consectetur.
+                  The marketing landscape is crowded with organizations making
+                  noise—but, the solution isn’t to be louder.
                 </p>
               </div>
             </div>
@@ -295,11 +296,11 @@ function App() {
 
               <div className="flex flex-col items-start gap-[4px]">
                 <h4 className="font-bold text-[15px] leading-[26px] text-[#212d31]">
-                  Generating increased revenue
+                  Development{" "}
                 </h4>
                 <p className="font-normal text-[15px] leading-[26px] text-[#212d31] w-full sm:w-[400px]">
-                  Quis ipsum gravida. Accumsan lacus facilisis dolor sit amet,
-                  consectetur.
+                  Your online platforms need to work for your business, showing
+                  your audience what you can do for them.
                 </p>
               </div>
             </div>
@@ -311,8 +312,7 @@ function App() {
         <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
           <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[800px]">
             We’re on a mission to build a better future where technology creates
-            good jobs for everyone. Fusce sed rutrum risus pulvinar tortor et.
-            Aenean suscipit ege.
+            good jobs for everyone. 
           </h3>
 
           <Link
