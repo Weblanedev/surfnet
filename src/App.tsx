@@ -158,7 +158,7 @@ function App() {
         />
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-12 items-start justify-center h-full ml-10 md:ml-[130px]">
-          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[400px] sm:w-[550px] md:w-[560px] leading-snug md:leading-[72px]">
+          <h1 className="font-medium md:font-semibold text-[40px] md:text-[60px] w-[350px] sm:w-[400px] md:w-[520px] leading-snug md:leading-[72px]">
             Want to launch your brand into the future?
           </h1>
 

@@ -142,9 +142,7 @@ const PrivacyPolicy = () => {
             looking for a partner for their digital media. We work with you, not
             for you.We are lorem duoa headquartered in North-Eastern France,
             with our 19 associates located across nine countries in order to
-            best serve a client base that stretches throughout North America,
-            Curabitur accumsan ultricies ultricies. Pellentesque dapibus at
-            nulla sed viverra. Fusce tempor orci non massa iaculis, eu auctor.
+            best serve a client base that stretches throughout North America.
           </p>
         </div>
 
@@ -159,7 +157,7 @@ const PrivacyPolicy = () => {
             created from your email address (also called a hash) may be provided
             to the Gravatar service to see if you are using it. The Gravatar
             service privacy policy is available here:
-            https://densefit.com/privacy-policy/. After approval of your
+            https://surfnet.site/privacy-policy/. After approval of your
             comment, your profile picture is visible to the public in the
             context of your comment.
           </p>
@@ -233,10 +231,10 @@ const PrivacyPolicy = () => {
             Embedded content from other websites{" "}
           </h3>
           <p className="text-[16px] text-black leading-[28.8px] font-normal w-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            sagittis venenatis massa eu tempus. Integer eu enim diam. In vitae
-            vulputate metus, ac dapibus turpis. Vivamus consequat mauris aliquet
-            tellus feugiat accumsan. Nam tincidunt dolor vel auctor imperdiet.
+            Articles on this site may include embedded content (e.g. videos,
+            images, articles, etc.). Embedded content from other websites
+            behaves in the exact same way as if the visitor has visited the
+            other website. 
           </p>
 
           <ul className="text-[16px] text-black leading-[28.8px] font-normal w-full list-decimal pl-12 md:pl-20 mt-[-9px]">
@@ -273,8 +271,7 @@ const PrivacyPolicy = () => {
         <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
           <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[800px]">
             We’re on a mission to build a better future where technology creates
-            good jobs for everyone. Fusce sed rutrum risus pulvinar tortor et.
-            Aenean suscipit ege.
+            good jobs for everyone.
           </h3>
 
           <Link
