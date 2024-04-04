@@ -152,7 +152,7 @@ function App() {
         <div className="absolute z-10 opacity-50 w-full h-full  bg-black"></div>
 
         <img
-          src="https://www.surfnet.site/wp-content/uploads/2024/03/microsoft-edge-DNADGmifFsc-unsplash-2048x1366.jpg"
+          src="https://cdn-wordpress-info.futurelearn.com/wp-content/uploads/FL307_blog_digital_marketing_banner.jpg.optimal.jpg"
           alt=""
           className="w-full h-full object-cover"
         />
