@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { MouseEventHandler, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { COUNTRIES_AND_STATES } from "./country-states";
 import { useModals } from "./useModal";
@@ -10,6 +10,47 @@ const Billing = () => {
   const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [selectedState, setSelectedState] = useState<string>("");
 
+  // State to manage the disabled state of the button
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  // State to manage form field values
+  const [cardHolderName, setCardHolderName] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expireDate, setExpireDate] = useState("");
+  const [cardCVC, setCardCVC] = useState("");
+
+  useEffect(() => {
+    // Function to check if all form fields are filled
+    const checkFormValidity = () => {
+      if (cardHolderName && cardNumber && expireDate && cardCVC) {
+        setIsButtonDisabled(false); // Enable the button if all fields are filled
+      } else {
+        setIsButtonDisabled(true); // Disable the button if any field is empty
+      }
+    };
+
+    checkFormValidity();
+  }, [cardHolderName, cardNumber, expireDate, cardCVC]);
+
+  // Event handlers to update form field values and check validity
+  const handleCardHolderNameChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setCardHolderName(e.target.value);
+  };
+
+  const handleCardNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCardNumber(e.target.value);
+  };
+
+  const handleExpireDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setExpireDate(e.target.value);
+  };
+
+  const handleCardCVCChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCardCVC(e.target.value);
+  };
+
   const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
     setSelectedState("");
@@ -17,6 +58,11 @@ const Billing = () => {
 
   const handleStateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedState(event.target.value);
+  };
+
+  const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault();
+    toggleShowInvoiceModal();
   };
 
   const showInvoice = useModals(["showInvoice"]);
@@ -153,13 +199,13 @@ const Billing = () => {
         </div>
       </section>
 
-      <section className="relative p-10 md:px-[130px] md:py-[130px] flex flex-col md:flex-row gap-8 items-center md:items-start w-full justify-center">
-        <div className="flex flex-col gap-8 items-start w-full justify-center md:pr-8 md:border-r">
-          <div className="flex flex-col gap-2.5 text-[#181616] items-start justify-center md:w-[720px]">
+      <section className="relative p-10 md:px-[130px] md:py-[130px] flex flex-col lg:flex-row gap-8 items-center lg:items-start w-full justify-center">
+        <div className="flex flex-col gap-8 items-start w-full justify-center lg:pr-8 lg:border-r">
+          <div className="flex flex-col gap-2.5 text-[#181616] items-start justify-center lg:w-[720px]">
             <h2 className="text-[32px] font-medium">Billing details</h2>
           </div>
 
-          <div className="w-full md:w-[720px]">
+          <div className="w-full lg:w-[720px]">
             <form className="mx-auto w-full flex flex-col gap-5">
               <div className="flex flex-col w-full gap-5 md:flex-row">
                 <input
@@ -264,7 +310,7 @@ const Billing = () => {
               />
             </form>
 
-            <div className="flex flex-col gap-5 mt-10 text-[#181616] items-start justify-center md:w-[720px]">
+            <div className="flex flex-col gap-5 mt-10 text-[#181616] items-start justify-center lg:w-[720px]">
               <h2 className="text-[32px] font-medium">Additional Details</h2>
 
               <textarea
@@ -281,39 +327,6 @@ const Billing = () => {
           <h4 className="font-bold text-[#a20401] leading-[28px]">
             PAYMENT DETAILS
           </h4>
-
-          {/* <div className="flex mt-[-5px] flex-col items-center justify-center w-full">
-            <div className="flex items-center justify-between py-[15px] w-full border-b">
-              <h4 className="text-[#707070] font-medium text-[13px]">
-                PRODUCT
-              </h4>
-              <h4 className="text-[#707070] font-medium text-[13px]">
-                SUBTOTAL
-              </h4>
-            </div>
-            <div className="flex items-center justify-between py-[15px] w-full border-b">
-              <h4 className="text-[#161616] font-medium text-[16px]">
-                Cabinet Wall Mounted × 1
-              </h4>
-              <h4 className="text-[#161616] font-medium text-[16px]">
-                $199.00
-              </h4>
-            </div>
-            <div className="flex items-center justify-between py-[15px] w-full border-b">
-              <h4 className="text-[#707070] font-medium text-[13px]">
-                SUBTOTAL
-              </h4>
-              <h4 className="text-[#161616] font-medium text-[16px]">
-                $199.00
-              </h4>
-            </div>
-            <div className="flex items-center justify-between py-[15px] w-full border-b">
-              <h4 className="text-[#707070] font-medium text-[13px]">TOTAL</h4>
-              <h4 className="text-[#a20401] font-medium text-[16px]">
-                $199.00
-              </h4>
-            </div>
-          </div> */}
 
           <div className="flex flex-col items-start justify-center w-full gap-5">
             <p className="text-[#707070] font-normal text-[13px]">
@@ -341,15 +354,20 @@ const Billing = () => {
                 required
               />
             </div>
+          </div>
 
-            <form className="flex flex-wrap gap-3 w-full">
+          <form>
+            <div className="flex flex-wrap gap-3 w-full">
               <label className="relative w-full flex flex-col">
-                <span className="font-bold mb-3">Card number</span>
+                <span className="font-bold mb-3">Card holder's name</span>
                 <input
                   className="rounded-md peer pl-12 pr-2 py-2 border-2 border-gray-200 placeholder-gray-300"
                   type="text"
-                  name="card_number"
-                  placeholder="0000 0000 0000"
+                  name="card_holders_name"
+                  placeholder="JOHN DOE"
+                  required
+                  value={cardHolderName}
+                  onChange={handleCardHolderNameChange}
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -367,13 +385,16 @@ const Billing = () => {
                 </svg>
               </label>
 
-              <label className="relative flex-1 flex flex-col">
-                <span className="font-bold mb-3">Expire date</span>
+              <label className="relative w-full flex flex-col">
+                <span className="font-bold mb-3">Card number</span>
                 <input
                   className="rounded-md peer pl-12 pr-2 py-2 border-2 border-gray-200 placeholder-gray-300"
                   type="text"
-                  name="expire_date"
-                  placeholder="MM/YY"
+                  name="card_number"
+                  required
+                  placeholder="0000 0000 0000"
+                  value={cardNumber}
+                  onChange={handleCardNumberChange}
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -386,97 +407,130 @@ const Billing = () => {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
                   />
                 </svg>
               </label>
 
-              <label className="relative flex-1 flex flex-col">
-                <span className="font-bold flex items-center gap-3 mb-3">
-                  CVC/CVV
-                  <span className="relative group">
-                    <span className="hidden group-hover:flex justify-center items-center px-2 py-1 text-xs absolute -right-2 transform translate-x-full -translate-y-1/2 w-max top-1/2 bg-black text-white">
-                      Hey ceci est une infobulle !
+              <div className="w-full flex gap-5 flex-col lg:flex-row">
+                <label className="relative w-full lg:flex-1 flex flex-col">
+                  <span className="font-bold mb-3">Expire date</span>
+                  <input
+                    className="rounded-md peer pl-12 pr-2 py-2 border-2 border-gray-200 placeholder-gray-300"
+                    type="text"
+                    name="expire_date"
+                    required
+                    placeholder="MM/YY"
+                    value={expireDate}
+                    onChange={handleExpireDateChange}
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute bottom-0 left-0 -mb-0.5 transform translate-x-1/2 -translate-y-1/2 text-black peer-placeholder-shown:text-gray-300 h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                </label>
+
+                <label className="relative w-full lg:flex-1 flex flex-col">
+                  <span className="font-bold flex items-center gap-3 mb-3">
+                    CVC/CVV
+                    <span className="relative group">
+                      <span className="hidden group-hover:flex justify-center items-center px-2 py-1 text-xs absolute -right-2 transform translate-x-full -translate-y-1/2 w-max top-1/2 bg-black text-white">
+                        The 3 digit number on the back of your card
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
                     </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
                   </span>
-                </span>
-                <input
-                  className="rounded-md peer pl-12 pr-2 py-2 border-2 border-gray-200 placeholder-gray-300"
-                  type="text"
-                  name="card_cvc"
-                  placeholder="&bull;&bull;&bull;"
-                />
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute bottom-0 left-0 -mb-0.5 transform translate-x-1/2 -translate-y-1/2 text-black peer-placeholder-shown:text-gray-300 h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  <input
+                    className="rounded-md peer pl-12 pr-2 py-2 border-2 border-gray-200 placeholder-gray-300"
+                    type="text"
+                    name="card_cvc"
+                    required
+                    placeholder="&bull;&bull;&bull;"
+                    value={cardCVC}
+                    onChange={handleCardCVCChange}
                   />
-                </svg>
-              </label>
-            </form>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute bottom-0 left-0 -mb-0.5 transform translate-x-1/2 -translate-y-1/2 text-black peer-placeholder-shown:text-gray-300 h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    />
+                  </svg>
+                </label>
+              </div>
+            </div>
 
-            <p className="text-[#707070] mt-[-15px] font-normal text-[13px]">
+            <p className="text-[#707070] mt-[20px] font-normal text-[13px]">
               Note: Fee charged is decided by the specific type service, and
               based on service demand. It may be lesser or higher.
             </p>
-          </div>
 
-          <h4 className="font-bold text-[#a20401] leading-[28px]">
-            PAYMENT METHODS
-          </h4>
+            <h4 className="font-bold text-[#a20401] mt-[20px] leading-[28px]">
+              PAYMENT METHODS
+            </h4>
 
-          <div className="w-full flex flex-col gap-2 items-start">
-            <img
-              src="https://help.zazzle.com/hc/article_attachments/360010513393"
-              alt=""
-              className="w-full"
-            />
-            <p className="text-[#707070] font-normal text-[13px]">
-              Make payment using your debit, credit card & bank account
+            <div className="w-full flex flex-col gap-2 items-start">
+              <img
+                src="https://help.zazzle.com/hc/article_attachments/360010513393"
+                alt=""
+                className="w-full"
+              />
+              <p className="text-[#707070] font-normal text-[13px]">
+                Make payment using your debit, credit card & bank account
+              </p>
+            </div>
+
+            <p className="text-[#161616] font-normal text-[16px] text-left">
+              Your personal data will be used to process your order, support
+              your experience throughout this website, and for other purposes
+              described in our{" "}
+              <Link
+                to="/privacy-policy"
+                className="text-[#a20401] cursor-pointer"
+              >
+                privacy policy.
+              </Link>
             </p>
-          </div>
 
-          <p className="text-[#161616] font-normal text-[16px] text-left">
-            Your personal data will be used to process your order, support your
-            experience throughout this website, and for other purposes described
-            in our{" "}
-            <Link
-              to="/privacy-policy"
-              className="text-[#a20401] cursor-pointer"
+            <button
+              type="submit"
+              disabled={isButtonDisabled}
+              className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 w-full mt-[22px] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={handleSubmit}
             >
-              privacy policy.
-            </Link>
-          </p>
-
-          <button
-            type="submit"
-            className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 w-full mt-[22px] transition-colors"
-            onClick={toggleShowInvoiceModal}
-          >
-            Place Order
-          </button>
+              Place Order
+            </button>
+          </form>
         </div>
       </section>
 
