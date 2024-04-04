@@ -47,9 +47,14 @@ const ShowOrderModal = (props: { toggle: () => void; show: boolean }) => {
         /> */}
         <div className=" flex flex-col text-center justify-center items-center gap-4">
           <h1 className="text-[32px] leading-10 text-black font-medium">
-            The details of your order has been successfully added to the waiting cart!
+            The details of your order has been successfully added to the waiting
+            cart!
           </h1>
-          <p className="text-[15px] font-medium text-[#9CA3AF]">
+          <h3 className="text-[16px] leading-tight text-black font-normal">
+            You will be notified through your account email/phone number once
+            upon approval, and your card would be charged appropriately. Thanks
+          </h3>
+          <p className="text-[12px] font-medium text-[#9CA3AF]">
             Please
             <Link
               to="/"
