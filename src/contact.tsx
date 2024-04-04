@@ -1,10 +1,58 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useModals } from "./useModal";
 import ShowContactModal from "./show-contact";
 
 const Contact = () => {
   const [navbarVisible, setNavbarVisible] = useState<boolean>(false);
+
+  // State to manage the disabled state of the button
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  // State to manage form field values
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const checkFormValidity = () => {
+      if (name && email && phone && subject && message) {
+        setIsButtonDisabled(false); // Enable the button if all fields are filled
+      } else {
+        setIsButtonDisabled(true); // Disable the button if any field is empty
+      }
+    };
+
+    checkFormValidity(); // Check form validity on component mount
+  }, [name, email, phone, subject, message]);
+
+  // Event handlers to update form field values and check validity
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhone(e.target.value);
+  };
+
+  const handleSubjectChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSubject(e.target.value);
+  };
+
+  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Add your form submission logic here
+  };
 
   const showContact = useModals(["showContact"]);
 
@@ -151,18 +199,25 @@ const Contact = () => {
         </div>
 
         <div className="w-full md:w-[720px]">
-          <form className="mx-auto w-full flex flex-col gap-5">
+          <form
+            className="mx-auto w-full flex flex-col gap-5"
+            onSubmit={handleSubmit}
+          >
             <div className="flex flex-col w-full gap-5 md:flex-row">
               <input
                 type="text"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
                 placeholder="Your Name"
+                value={name}
+                onChange={handleNameChange}
                 required
               />
               <input
                 type="email"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
                 placeholder="Your Email"
+                value={email}
+                onChange={handleEmailChange}
                 required
               />
             </div>
@@ -171,12 +226,16 @@ const Contact = () => {
                 type="text"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
                 placeholder="Phone"
+                value={phone}
+                onChange={handlePhoneChange}
                 required
               />
               <input
                 type="text"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px]"
                 placeholder="Subject"
+                value={subject}
+                onChange={handleSubjectChange}
                 required
               />
             </div>
@@ -186,12 +245,16 @@ const Contact = () => {
               rows={7}
               className="block p-[15px] w-full text-sm text-gray-900 border border-gray-300"
               placeholder="Your Message"
+              value={message}
+              onChange={handleMessageChange}
+              required
             ></textarea>
 
             <button
               type="submit"
-              className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 flex items-center justify-center gap-3"
+              className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-green-500"
               onClick={toggleShowContactModal}
+              disabled={isButtonDisabled}
             >
               Submit
             </button>

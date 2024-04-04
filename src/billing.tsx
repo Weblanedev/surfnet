@@ -525,7 +525,7 @@ const Billing = () => {
             <button
               type="submit"
               disabled={isButtonDisabled}
-              className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 w-full mt-[22px] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-base font-medium text-white bg-green-500 rounded-md md:rounded-md px-7 md:px-12 py-[15px] hover:bg-green-600 w-full mt-[22px] transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-green-500"
               onClick={handleSubmit}
             >
               Place Order
